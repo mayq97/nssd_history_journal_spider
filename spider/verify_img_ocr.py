@@ -9,8 +9,9 @@ client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 def get_file_content(filePath):
     with open(filePath, 'rb') as fp:
         return fp.read()
+
 def picture_process(img):
-    page_snap_obj = Image.open('pictures.png')
+    page_snap_obj = Image.open('./temp/pictures.png')
     location = img.location
     size = img.size  # 获取验证码的大小参数
     left = location['x']
@@ -29,15 +30,18 @@ def picture_process(img):
                 pixdata[x, y] = 0
             else:
                 pixdata[x, y] = 255
-    img.save("code.png")
+    img.save("./temp/code.png")
 
 def ocr(img=None):
     picture_process(img)
-    image = get_file_content('pictures.png')
-
-    """ 调用通用文字识别, 图片参数为本地图片 """
-    res =  client.basicGeneral(image)
-    print("验证码",res["words_result"][0]["words"])
-    return res["words_result"][0]["words"]
+    image = get_file_content('./temp/code.png')
+    try:
+        """ 调用通用文字识别, 图片参数为本地图片 """
+        res =  client.basicGeneral(image)
+        code = res["words_result"][0]["words"]
+        code = code.replace(" ","").replace(" ","")
+        return code.strip()
+    except Exception:
+        return "n"
 if __name__ == "__main__":
     ocr()
