@@ -84,10 +84,12 @@ def spider_pdf(jornal_name,try_num = 5):
                 except TimeoutException:
                     time.sleep(60 * try_i + random.randint(30, 60))
                     logger.info("*********** {} timeout ***********".format(try_i))
+                    if try_i == try_num-1:
+                        logger.info("更换下载账号")
+                        login()
                     continue
                 except Exception:
                     logger.info("*********** fail ***********")
-
                     continue
             if di % 10 == 0:
                 logger.info("-------------- {} / {} -----------".format(di+1,art_num))
