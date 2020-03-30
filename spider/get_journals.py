@@ -96,6 +96,7 @@ def fetch_article_download_url(qkyearslist_url,process_name):
                 continue
     # 结果保存
     finally:
+        insert_to_db()
         un_crawler_df = pd.DataFrame(un_crawler_list,columns=["url"])
         un_crawler_df.to_excel("un_crawler_{}.xlsx".format(process_name),index = False)
         logger.info("{} finish !".format(process_name))
