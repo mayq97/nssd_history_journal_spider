@@ -1,0 +1,871 @@
+body, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+::selection {
+  background: #00A2E8; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #00A2E8; /* Gecko Browsers */
+}
+.search_result_mark {
+    position: absolute;
+    opacity: 0.6;
+    background-color: magenta;
+}
+.tts_para__mark {
+   position: absolute;
+   opacity: 0.4;
+   background-color: green;
+}
+
+body {
+    padding: 0px;
+    margin-top: 24px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: justify;
+    font: 15pt/180% arial,verdana;
+    color: #000;
+    background-color: #fff;
+}
+
+html {
+  touch-action: manipulation;
+}
+.comhead {
+    background-color: #2a83d3;
+    padding-left: 12px;
+    color: #FFF;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    font-size: 16px;
+    /*display:block;*/
+    display:none;
+}
+
+p {
+    margin: 0px;
+}
+
+.article_en {
+    font-family: "arial";
+}
+
+.article_leadtitle {
+    text-align: left;
+    font-size: 12pt;
+    line-height: 1.4em;
+    font-family: "HGKT_ZW";
+    color: #666;
+    margin-top: 2.5em;
+    letter-spacing: 1pt;
+}
+
+.article_title_cn {
+    text-align: center;
+    font-size: 18pt;
+    font-family: "HGXBS_ZW";
+    line-height: 1.8em;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.article_title_en {
+    text-align: center;
+    font-size: 18pt;
+    font-family: "HGH2_ZW";
+    line-height: 1.8em;
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+
+.article_subtitle_cn,{
+    text-align: center;
+    font-size: 16pt;
+    font-family: "HGXBS_ZW";
+    line-height: 1.6em;
+    margin-top: 0.5em;
+}
+
+.article_subtitle_en {
+    text-align: center;
+    font-size: 16pt;
+    font-family: "HGH2_ZW";
+    line-height: 1.6em;
+    margin-top: 0.5em;
+}
+.article_author_cn {
+    text-align: center;
+    font-size: 15pt;
+    font-family: "HGKT_ZW";
+    line-height: 1.2em;
+    margin: 0.7em 1.5em 0em 1.5em;
+}
+
+.article_author_i {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.article_author_en {
+    text-align: center;
+    font-size: 15pt;
+    font-family: "HGB1_ZW";
+    line-height: 1.2em;
+    margin-top: 0.7em;
+}
+
+sub.sup {
+    font-size: 13pt;
+}
+
+.article_organization_cn {
+    text-align: center;
+    font-size: 12pt;
+    font-family: "HGBS_ZW";
+    line-height: 1.6em;
+    margin: 1em 1.5em 0em 1.5em;
+}
+
+.article_organization_en {
+    text-align: left;
+    font-size: 12pt;
+    font-family: "HGB1X_ZW";
+    line-height: 1.6em;
+    margin-top: 1em;
+}
+
+.article_abstract_cn {
+    color: #555;
+    font-size: 13.5pt;
+    font-family: "HGKT_ZW";
+    line-height: 1.6em;
+    margin-top: 1em;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.article_abstract_en {
+    color: #555;
+    font-size: 13.5pt;
+    font-family: "HGB1_ZW";
+    line-height: 1.6em;
+    margin-top: 1em;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.article_keywords_cn, .articletypecode {
+    color: #555;
+    font-size: 13.5pt;
+    font-family: "HGKT_ZW";
+    line-height: 1.6em;
+    margin-top: 0.5em;
+    text-indent: 2em;
+}
+
+.article_keywords_en {
+    color: #555;
+    font-size: 13.5pt;
+    font-family: "HGB1_ZW";
+    line-height: 1.6em;
+    margin-top: 0.5em;
+    text-indent: 2em;
+}
+
+.article_abstract_cn b, .article_keywords_cn b, .articleidentifier b, .articletypecode b {
+    font-weight: normal;
+    margin-right: 1pt;
+    font-family: "HGHT_ZW";
+}
+
+.article_abstract_en b, .article_keywords_en b {
+    font-weight: normal;
+    font-family: "HGH2_ZW";
+    margin-right: 1pt;
+}
+
+.article_body {
+    margin-top: 1.5em;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+    .article_body p {
+        font-size: 13pt;
+        font-family: "HGSS_ZW";
+        line-height: 1.8em;
+        margin-top: 0.5em;
+        text-indent: 2em;
+    }
+
+.section_title {
+    color: #0a69bf;
+    font-size: 16pt;
+    font-family: "HGXBS_ZW";
+    line-height: 1.6em;
+    font-weight: bold;
+    margin: 1em 0em 1em 0em;
+}
+
+.subsection_title {
+    color: #2a83d3;
+    font-size: 15pt;
+    font-family: "HGHT_ZW";
+    line-height: 1.6em;
+    font-weight: bold;
+    margin: 1em 0em 1em 0em;
+}
+
+.threesection_title {
+    font-size: 14pt;
+    font-family: "HGHT_ZW";
+    line-height: 1.6em;
+    margin: 1em 0em 1em 0em;
+}
+
+p.image_title_cn {
+    text-align: center;
+    font-size: 13.5pt;
+    font-family: "HGHT_ZW";
+    line-height: 1.2em;
+    text-indent: 0em;
+}
+
+p.image_title_en {
+    text-align: center;
+    font-size: 13.5pt;
+    font-family: "HGH2_ZW";
+    line-height: 1.2em;
+    text-indent: 0em;
+}
+
+img.width {
+    min-width: 65%;
+    max-width: 95%;
+    display: block;
+    border: none;
+    text-align: center;
+    margin: auto;
+    clear: both;
+}
+/*img.inline{text-align:left;vertical-align:middle;border:none;}*/
+p.image_note {
+    text-align: center;
+    display: block;
+    font: 10.5pt/120%;
+    font-family: "HGSS_ZW";
+    color: #666;
+    text-indent: 0em;
+}
+
+.article_reference {
+    margin-top: 1.5em;
+}
+
+.reference_title {
+    text-align: left;
+    font-size: 15pt;
+    font-family: "HGHT_ZW";
+    line-height: 1.8em;
+    font-weight: bold;
+    margin: 2em 0em 0.5em 0em;
+}
+
+.reference_list li {
+    list-style: none;
+    font-size: 12pt;
+    font-family: "HGSS_ZW";
+    line-height: 2em;
+    margin-top: 0.5em;
+}
+
+.author_intro_title {
+    text-align: left;
+    font-size: 12pt;
+    font-family: "HGKT_ZW";
+    line-height: 1.4em;
+    letter-spacing: 1pt;
+    color: #666;
+    margin: 1.5em 0em;
+}
+
+a {
+    color: #0a69bf;
+    text-decoration: underline;
+}
+
+
+
+    .comhead a.leftreturn {
+        text-align: left;
+        text-decoration: none;
+        color: #fff;
+        float: left;
+        background: url(http://m.cnki.net/mcnki/images/returnbtn.png) no-repeat 0px center;
+        background-size: 16px 24px;
+        padding: 0px 20px;
+    }
+
+        .comhead a.leftreturn:hover, .comhead a.leftreturn:active {
+            color: #a2d4fc;
+            background-image: url(http://m.cnki.net/mcnki/images/returnbtn-h.png);
+        }
+
+    .comhead span.optbox {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        display: block;
+        height: 48px;
+    }
+
+span.optbox a {
+    display: inline-block;
+    width: 42px;
+    height: 48px;
+    background: url(http:////m.cnki.net/mcnki/images/commore.png) no-repeat center center;
+    background-size: 24px 24px;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+    span.optbox a.commore {
+        background: url(http://m.cnki.net/mcnki/images/commore.png) no-repeat center center;
+        background-size: 16px 24px;
+    }
+
+    span.optbox a.comdel {
+        background-image: url(http://m.cnki.net/mcnki/images/person/delete.png);
+    }
+
+    span.optbox a.comadd {
+        background-image: url(http://m.cnki.net/mcnki/images/person/add.png);
+    }
+
+    span.optbox a.comsearch {
+        background-image: url(http://m.cnki.net/mcnki/images/person/search.png);
+    }
+
+    span.optbox a.commore:hover, span.optbox a.commore:active {
+        background-image: url(http://m.cnki.net/mcnki/images/commore-h.png);
+    }
+
+    span.optbox a.comdel:hover, span.optbox a.comdel:active {
+        background-image: url(http://m.cnki.net/mcnki/images/person/delete-h.png);
+    }
+
+    span.optbox a.comadd:hover, span.optbox a.comadd:active {
+        background-image: url(http://m.cnki.net/mcnki/images/person/add-h.png);
+    }
+
+    span.optbox a.comsearch:hover, span.optbox a.comsearch:active {
+        background-image: url(http://m.cnki.net/mcnki/images/person/search-h.png);
+    }
+
+    span.optbox a.edit {
+        font-size: 16px;
+        color: #fff;
+        text-indent: 0px;
+        background: none;
+    }
+
+        span.optbox a.edit:hover, span.optbox a.edit:active {
+            color: #a2d4fc;
+        }
+
+.comhead a.returnpic {
+    position: absolute;
+    left: 0px;
+    background: url(http://m.cnki.net/mcnki/images/returnbtn.png) no-repeat 12px center;
+    background-size: 16px 24px;
+    width: 48px;
+    display: block;
+    height: 48px;
+    overflow: hidden;
+    text-indent: -999px;
+}
+
+    .comhead a.returnpic:hover {
+        background-image: url(http://m.cnki.net/mcnki/images/returnbtn-h.png);
+    }
+
+.mainMenu {
+    width: 126px;
+    border-left: #ccc solid 1px;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: none;
+    z-index: 999;
+    font-size: 14px;
+}
+
+    .mainMenu li {
+        border-bottom: #ccc solid 1px;
+        background-color: #fafafa;
+        text-align: left;
+    }
+
+        .mainMenu li a {
+            display: block;
+            padding: 2px 10px;
+        }
+
+            .mainMenu li a img {
+                display: inline;
+                float: left;
+                margin: 13px 10px 0px 0px;
+                width: 20px;
+                height: 20px;
+            }
+
+        .mainMenu li:hover {
+            background-color: #f5f5f5;
+        }
+
+a {
+    text-decoration: none;
+    color: #666;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+    a:hover {
+        color: #2f8bd6;
+    }
+
+.sidebar-a {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+    .sidebar-a .arrow {
+        right: -14px;
+    }
+
+        .sidebar-a .arrow span {
+            background-position: -30px 0;
+        }
+
+    .sidebar-a .off span {
+        background-position: -37px 0;
+    }
+
+.sidenav {
+    text-align:left;
+    width: 200px;
+    height: auto;
+    background-color: #fff;
+    top: 8px;
+    right: 0;
+    position: fixed;
+}
+
+.off .sidenav-list a, .off .sidenav-list .subnode .file {
+    white-space: nowrap;
+}
+
+.sidenav-list {
+    max-height: 600px;
+    overflow: auto;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+   width:100%;
+}
+
+    .sidenav-list dt.tit {
+        padding-left: 5px;
+        font-weight: bold;
+        line-height: 30px;
+        font-size: 16px;
+        border-bottom: 1px solid #2f8bd6;
+        color: #2f8bd6;
+        white-space: nowrap;
+    }
+
+    .sidenav-list .subnode {
+        font-size: 14px;
+        padding: 5px 0 5px 5px;
+        line-height: 26px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+        .sidenav-list .subnode .file {
+            padding-left: 10px;
+            font-weight: normal;
+            white-space: normal;
+        }
+
+    .sidenav-list li a {
+        color: #333;
+        display: block;
+    }
+
+        .sidenav-list li a:hover {
+            color: #2f8bd6;
+            background: #f7f9f8;
+        }
+
+    .sidenav-list h6 {
+        line-height: 24px;
+        white-space: nowrap;
+    }
+
+        .sidenav-list h6 a {
+            display: block;
+            font-size: 14px;
+            color: #666;
+        }
+
+            .sidenav-list h6 a:hover {
+                color: #2f8bd6;
+            }
+
+.sidenav .guide p {
+    height: 30px;
+    margin-top: 2px;
+    line-height: 30px;
+    color: #2f8bd6;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #eee;
+    white-space: nowrap;
+    clear: both;
+}
+
+    .sidenav .guide p a {
+        float: right;
+        width: 100%;
+        padding-left: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .sidenav .guide p i {
+        float: right;
+        width: 20px;
+        height: 30px;
+        background-image: url(../images/sidebar-icon.png);
+        background-repeat: no-repeat;
+        background-position: 6px 12px;
+        -moz-user-select: none;
+    }
+
+.sidenav .noico i {
+    display: none;
+}
+
+.sidenav .contentbox {
+    margin-left: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    display: block;
+}
+
+    .sidenav .contentbox li {
+        font-weight: normal;
+        font-size: 12px;
+    }
+
+        .sidenav .contentbox li a {
+            display: block;
+        }
+
+.sidenav .selected p i {
+    background-position: -9px 12px;
+}
+
+.sidenav .selected .contentbox {
+    display: none;
+}
+
+.sidenav-list a.cur {
+    color: #2f8bd6;
+}
+
+.sidenav .contentbox li {
+    padding: 4px 0;
+}
+
+.sidenav-list::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,0);
+}
+
+.sidenav-list::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f5f7f8;
+}
+
+.sidenav-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #cdcdcd;
+    -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,.3);
+}
+
+.main .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 17px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url(../images/icon-file.png);
+    background-repeat: no-repeat;
+}
+
+.main .icon-word {
+    background-position: 0 0;
+}
+
+.main .icon-mp3 {
+    background-position: -20px 0;
+}
+
+.main .icon-pdf {
+    background-position: -40px 0;
+}
+
+.main .icon-jpg {
+    background-position: -60px 0;
+}
+
+.main .icon-table {
+    background-position: -80px 0;
+}
+
+.main .icon-txt {
+    background-position: -100px 0;
+}
+
+.main .icon-mp4, .main .icon-avi {
+    background-position: -120px 0;
+}
+
+.sidebar-b {
+    float: right;
+    margin-left: 20px;
+}
+
+    .sidebar-b .arrow {
+        left: -15px;
+    }
+
+        .sidebar-b .arrow span {
+            background-position: -37px 0;
+        }
+
+    .sidebar-b .off span {
+        background-position: -30px 0;
+    }
+
+.refer {
+    position: relative;
+    right: 0;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+
+    .refer h4 {
+        position: relative;
+        z-index: 99;
+        height: 30px;
+        margin-right: 10px;
+        padding-left: 5px;
+        margin-bottom: 10px;
+        line-height: 30px;
+        font-size: 16px;
+        font-family: "HGHT_ZW";
+        color: #2f8bd6;
+        border-bottom: 1px solid #2f8bd6;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: #fff;
+    }
+
+        .refer h4 .tit {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .refer h4 .tit {
+            *display: inline;
+        }
+
+        .refer h4 .close {
+            display: none;
+            height: 30px;
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: normal;
+            color: red;
+            *height: 28px;
+        }
+
+    .refer ul {
+        padding-left: 10px;
+    }
+
+    .refer li {
+        margin-bottom: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+        .refer li b {
+            margin-right: 8px;
+        }
+
+        .refer li a {
+            line-height: 20px;
+            font-size: 12px;
+            text-align: left;
+        }
+
+            .refer li a.nohref {
+                color: #333;
+                cursor: inherit;
+            }
+
+        .refer li.cur.selected a {
+            color: #f30;
+        }
+
+.sidebar-b .showrefer .refer-list li {
+    display: none;
+}
+
+    .sidebar-b .showrefer .refer-list, .sidebar-b .showrefer .refer-list li.cur {
+        display: block;
+    }
+
+        .sidebar-b .showrefer .refer-list li.cur a {
+            white-space: normal;
+            word-break: break-all;
+        }
+
+.sidebar-b .showrefer .close {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.subbox {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.side-scroller {
+    position: absolute;
+    top: 41px;
+    z-index: 90;
+    width: 250px;
+}
+
+.sidebar-b .showrefer .close {
+    *display: inline;
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;  /*Full width */
+    height: 100%; /* Full height */
+
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-wrap {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow:auto;
+}
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens 
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+    */
